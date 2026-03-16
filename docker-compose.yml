@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  minio:
+    image: minio/minio:latest
+    container_name: cleanops-minio
+    ports:
+      - "9000:9000" # Cổng API để code Python/Backend gọi tải ảnh
+      - "9001:9001" # Cổng giao diện Web (Console) để bạn truy cập
+    environment:
+      - MINIO_ROOT_USER=admin
+      - MINIO_ROOT_PASSWORD=password123
+    command: server /data --console-address ":9001"
