@@ -209,14 +209,22 @@ __marimo__/
 # Local datasets
 ppe-detection-dataset/
 ppe-dataset/
+d_const/
+d_harness/
+d_med/
+d_trash/
+d_wet/
+Master_Dataset/
 
 # Project local environment
 myenv/
 
 # Training outputs and local model artifacts
 runs/
+runs_master/
 *.pt
 *.onnx
+*.zip
 
 # OS/editor noise
 Thumbs.db

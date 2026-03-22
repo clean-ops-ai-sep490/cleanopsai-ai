@@ -9,7 +9,7 @@ from io import BytesIO
 app = FastAPI()
 
 # Lần đầu tiên chạy, nó sẽ tự động tải file model YOLOv8 mặc định (yolov8n.pt) nặng khoảng 6MB về máy.
-model = YOLO("best_local_gpu.pt") 
+model = YOLO("best_ppe_model_v1.pt") 
 
 class AIRequest(BaseModel):
     image_urls: List[str]
