@@ -226,6 +226,18 @@ runs_master/
 *.onnx
 *.zip
 
+# Incremental training generated artifacts
+Master_Dataset_v2/
+new_data_sources/
+runs_incremental/
+dataset_candidates_new.json
+master_dataset_v2_new_only.yaml
+tmp_rf_*.py
+
+# Local-only scratch files
+cleanops-ai.ipynb
+master_dataset.yaml
+
 # OS/editor noise
 Thumbs.db
 .DS_Store
