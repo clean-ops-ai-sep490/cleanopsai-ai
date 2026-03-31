@@ -234,6 +234,11 @@ dataset_candidates_new.json
 master_dataset_v2_new_only.yaml
 tmp_rf_*.py
 
+# Temporary helper scripts and dataset caches
+ai_modules/ppe/tools/
+*.cache
+labels.cache
+
 # Local-only scratch files
 cleanops-ai.ipynb
 master_dataset.yaml

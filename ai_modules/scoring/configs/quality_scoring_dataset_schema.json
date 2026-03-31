@@ -1,0 +1,38 @@
+{
+  "description": "Final quality scoring dataset schema for CleanOps PoC",
+  "files": {
+    "train_jsonl": "data/scoring_final/train.jsonl",
+    "val_jsonl": "data/scoring_final/val.jsonl"
+  },
+  "jsonl_row_example": {
+    "before_image": "images/train/before_0001.jpg",
+    "after_image": "images/train/after_0001.jpg",
+    "mask": "masks/train/after_0001.png",
+    "contamination_level": "LOW",
+    "environment": "RESTROOM",
+    "gps_distance_m": 2.8,
+    "timestamp_delta_sec": 190,
+    "device_match": true,
+    "ssim_anchor": 0.93,
+    "worker_override": false
+  },
+  "mask_encoding": {
+    "0": "background",
+    "1": "detected_stains",
+    "2": "dirt_coverage",
+    "3": "abnormal_objects"
+  },
+  "contamination_levels": [
+    "LOW",
+    "MEDIUM",
+    "HIGH"
+  ],
+  "environments": [
+    "OUTDOOR",
+    "GLASS",
+    "BASEMENT",
+    "LOBBY_CORRIDOR_ELEVATOR",
+    "RESTROOM",
+    "HOSPITAL_OR"
+  ]
+}
