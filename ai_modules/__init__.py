@@ -1,1 +1,1 @@
-"""Domain modules for PPE and sanitation scoring."""
+"""Domain modules for PPE detection."""

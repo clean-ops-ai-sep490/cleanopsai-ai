@@ -1,8 +1,7 @@
 from fastapi import FastAPI, Query
 
 from ai_modules.ppe.service import detect_from_image_url, evaluate_ppe_payload
-from ai_modules.scoring.service import SCORER
-from ai_modules.schemas import AIRequest, QuickTestRequest, SanitationScoreRequest, SanitationScoreResponse
+from ai_modules.schemas import AIRequest, QuickTestRequest
 
 app = FastAPI(title="CleanOps AI Service")
 
@@ -45,9 +44,3 @@ async def test_detect(
 async def test_detect_post(req: QuickTestRequest):
     """Quick test endpoint for tools that prefer JSON body."""
     return await test_detect(image_url=req.image_url, min_confidence=req.min_confidence)
-
-
-@app.post("/api/ai/quality-score", response_model=SanitationScoreResponse)
-async def evaluate_sanitation(req: SanitationScoreRequest):
-    """Evaluate before/after sanitation quality based on segmentation scoring model."""
-    return SCORER.evaluate(before_url=req.before_img, after_url=req.after_img)

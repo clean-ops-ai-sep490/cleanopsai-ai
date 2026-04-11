@@ -239,6 +239,10 @@ ai_modules/ppe/tools/
 *.cache
 labels.cache
 
+# Generated local data artifacts
+data/processed/
+external/infinity-datasets/
+
 # Local-only scratch files
 cleanops-ai.ipynb
 master_dataset.yaml
