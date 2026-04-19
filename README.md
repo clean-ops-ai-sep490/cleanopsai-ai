@@ -40,6 +40,9 @@ The canonical training manifest is `artifacts/manifests/ppe_dataset.yaml`, which
 - `POST /api/ai/evaluate_ppe`
 - `GET /api/ai/test_detect`
 - `POST /api/ai/test_detect`
+- `GET /api/ai/test_detect_visualize`
+- `POST /api/ai/test_detect_visualize`
+- `GET /api/ai/test_detect_visualize_image`
 
 ## Run Locally
 
