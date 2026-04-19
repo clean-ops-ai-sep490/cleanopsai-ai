@@ -1,12 +1,10 @@
-from typing import List
-
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class AIRequest(BaseModel):
-    image_urls: List[str]
+    image_urls: list[str] = Field(..., min_length=1)
     validation_type: str = "all_required"
-    required_objects: List[str]
+    required_objects: list[str] = Field(..., min_length=1)
     min_confidence: float = 0.25
 
 

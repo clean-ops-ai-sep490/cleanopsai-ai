@@ -1,0 +1,14 @@
+path: ../../datasets/ppe_dataset
+train: images/train
+val: images/valid
+names:
+  0: gloves
+  1: surgical_mask
+  2: face_shield
+  3: biohazard_suit
+  4: helmet
+  5: safety_vest
+  6: safety_harness
+  7: boots
+  8: trash_bag
+  9: wet_floor_sign

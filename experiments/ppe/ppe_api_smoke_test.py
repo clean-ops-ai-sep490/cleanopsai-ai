@@ -4,7 +4,7 @@ Skeleton script to test 10 PPE API cases.
 How to use:
 1) Start your FastAPI app (default: http://127.0.0.1:8000)
 2) Fill image URLs and expected notes in TEST_CASES below
-3) Run: python test_ppe_api_skeleton.py
+3) Run: python experiments/ppe/ppe_api_smoke_test.py
 """
 
 import json

@@ -186,7 +186,7 @@ cython_debug/
 #  that can be found at https://github.com/github/gitignore/blob/main/Global/VisualStudioCode.gitignore
 #  and can be added to the global gitignore or merged into this file. However, if you prefer, 
 #  you could uncomment the following to ignore the entire vscode folder
-# .vscode/
+.vscode/
 
 # Ruff stuff:
 .ruff_cache/
@@ -206,46 +206,27 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 
-# Local datasets
-ppe-detection-dataset/
-ppe-dataset/
-d_const/
-d_harness/
-d_med/
-d_trash/
-d_wet/
-Master_Dataset/
+# Local canonical dataset
+datasets/ppe_dataset/
 
 # Project local environment
 myenv/
 
-# Training outputs and local model artifacts
+# Model artifacts and training outputs
+artifacts/models/*.pt
+artifacts/models/*.onnx
+artifacts/imports/*.zip
+artifacts/reports/
 runs/
 runs_master/
-*.pt
-*.onnx
-*.zip
-
-# Incremental training generated artifacts
-Master_Dataset_v2/
-new_data_sources/
 runs_incremental/
-dataset_candidates_new.json
-master_dataset_v2_new_only.yaml
-tmp_rf_*.py
 
-# Temporary helper scripts and dataset caches
-ai_modules/ppe/tools/
+# Experiment-only helper files
 *.cache
 labels.cache
 
-# Generated local data artifacts
-data/processed/
-external/infinity-datasets/
-
 # Local-only scratch files
 cleanops-ai.ipynb
-master_dataset.yaml
 
 # OS/editor noise
 Thumbs.db
